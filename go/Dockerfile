@@ -1,4 +1,4 @@
-FROM golang:latest
+FROM golang:1.14-rc-buster
 
 ARG USERNAME=vscode
 ARG USER_UID=1000
@@ -40,7 +40,6 @@ RUN mkdir -p $GOPATH/src $GOPATH/bin $GOPATH/pkg \
         github.com/cweill/gotests/... \
         golang.org/x/tools/cmd/goimports \
         golang.org/x/lint/golint \
-        golang.org/x/tools/cmd/gopls \
         github.com/alecthomas/gometalinter \
         honnef.co/go/tools/... \
         github.com/golangci/golangci-lint/cmd/golangci-lint \
